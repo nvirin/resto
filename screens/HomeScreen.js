@@ -12,7 +12,19 @@ import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 
+
+import { WebView } from 'react-native-webview';
+
 export default class HomeScreen extends React.Component {
+    render() {
+    return (
+      <WebView
+        source={{uri: 'https://democuisine.nicolasvirin.com'}}
+        style={{marginTop: 20}}
+      />
+    );
+  }
+  /*
   static navigationOptions = {
     header: null,
   };
@@ -95,10 +107,10 @@ export default class HomeScreen extends React.Component {
     WebBrowser.openBrowserAsync(
       'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes'
     );
-  };
+  };*/
 }
 
-const styles = StyleSheet.create({
+/*const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -185,4 +197,4 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#2e78b7',
   },
-});
+});*/
